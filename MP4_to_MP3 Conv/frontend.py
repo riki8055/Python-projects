@@ -20,33 +20,33 @@ class Converter:
 
 	# Initializing the frame
 	def __init__(self, root):
-		self.f = Frame(root, width=300, height=300, bg='#2f3e46')
+		self.f = Frame(root, width=350, height=300, bg='#2f3e46')
 		self.f.propagate(0)		# avoid frame to propagate
 		self.f.pack()
 
-		self.l1 = Label(self.f, text='Source', font=('Calibri', -24))
+		self.l1 = Label(self.f, text='Source', font=('Calibri', -20))
 		self.l1.pack(pady=10)
 
 		self.e1_value = StringVar()
-		self.e1 = Entry(self.f, textvariable=self.e1_value, font=('Body+'))
+		self.e1 = Entry(self.f, textvariable=self.e1_value, font=('Body+'), width=28)
 		self.e1.pack()
 
-		self.b1 = Button(self.f, text='Browse', width=6,
+		self.b1 = Button(self.f, text='Browse', width=6 , font=('Calibri', -13),
 			bg='#4895ef', command=self.source)
 		self.b1.pack(pady=5)
 
-		self.l2 = Label(self.f, text='Destination', font=('Calibri', -24))
+		self.l2 = Label(self.f, text='Destination', font=('Calibri', -20))
 		self.l2.pack(pady=10)
 
 		self.e2_value = StringVar()
 		self.e2 = Entry(self.f, textvariable=self.e2_value, font=('Body+'))
 		self.e2.pack()
 
-		self.b2 = Button(self.f, text='Browse', width=6,
+		self.b2 = Button(self.f, text='Browse', width=6 , font=('Calibri', -13),
 			bg='#4895ef', command=self.destination)
 		self.b2.pack(pady=5)
 
-		self.b3 = Button(self.f, text='Convert', width=10, font='Calibri',
+		self.b3 = Button(self.f, text='Convert', font=('Calibri', -20),
 			cursor='hand2', bg='#06d6a0', command=self.conv)
 		self.b3.pack(pady=15)
 
